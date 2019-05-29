@@ -5,7 +5,7 @@ using Xamarin.Forms.Xaml;
 
 namespace Xamls.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
+    //[XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AboutPage : ContentPage
     {
         public AboutPage()

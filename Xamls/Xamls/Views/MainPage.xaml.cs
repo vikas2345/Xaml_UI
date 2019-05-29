@@ -7,7 +7,7 @@ using Xamarin.Forms.Xaml;
 
 namespace Xamls.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
+    //[XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainPage : MasterDetailPage
     {
         Dictionary<int, NavigationPage> MenuPages = new Dictionary<int, NavigationPage>();
@@ -31,6 +31,12 @@ namespace Xamls.Views
                         break;
                     case (int)MenuItemType.About:
                         MenuPages.Add(id, new NavigationPage(new AboutPage()));
+                        break;
+                    case (int)MenuItemType.QuestionsPage:
+                        MenuPages.Add(id, new NavigationPage(new QuestionsPage()));
+                        break;
+                    case (int)MenuItemType.ChameleonUI:
+                        MenuPages.Add(id, new NavigationPage(new ChameleonUI.ChameleonUI_HomePage()));
                         break;
                 }
             }

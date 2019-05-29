@@ -8,7 +8,7 @@ using Xamls.Models;
 
 namespace Xamls.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
+    //[XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class NewItemPage : ContentPage
     {
         public Item Item { get; set; }

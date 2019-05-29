@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Xamls.Views.QuestionsPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:debug="clr-namespace:Xamarin.Forms.DebugRainbows;assembly=Xamarin.Forms.DebugRainbows"
+    debug:DebugRainbow.IsDebug="true">
+
+    <Grid x:Name="mainGrid" RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="100" />
+            <RowDefinition Height="2*" />
+        </Grid.RowDefinitions>
+
+        <BoxView Grid.Row="0" Color="White" />
+        <Frame
+            Grid.Row="1"
+            Padding="10"
+            BackgroundColor="White">
+            <Image Grid.Row="1" Source="logo" />
+        </Frame>
+
+        <Grid x:Name="LoginGrid" Grid.Row="2" />
+
+        <Grid Grid.Row="3">
+            <!--  grid menu 1  -->
+            <Grid>
+                <Grid.RowDefinitions />
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="20" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="20" />
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="1">
+                    <Label
+                        Grid.Row="0"
+                        HorizontalOptions="Center"
+                        Text="UserName" />
+                    <Entry HorizontalOptions="Center" Placeholder="21singhvikas@gmail.com" />
+                    <Label Text="Password" />
+                    <Entry IsPassword="True" Placeholder="Password" />
+
+
+                </Grid>
+
+
+
+            </Grid>
+
+
+
+
+
+
+
+
+
+            <Button
+                BackgroundColor="Red"
+                HorizontalOptions="CenterAndExpand"
+                Text=" Sign In"
+                TextColor="White" />
+            <Label VerticalOptions="EndAndExpand">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                            <Span Text="Don't have an Account?" />
+                            <Span FontAttributes="Bold" Text=" Sign Up " />
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+        </Grid>
+
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+    </Grid>
+
+</ContentPage>

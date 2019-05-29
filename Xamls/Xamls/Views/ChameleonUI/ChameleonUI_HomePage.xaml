@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Xamls.Views.ChameleonUI.ChameleonUI_HomePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundImage="chameleon.png">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+
+            <Label
+                Grid.Row="1"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                FontAttributes="Bold"
+                FontSize="Large"
+                HorizontalOptions="StartAndExpand"
+                Text="CHAMELEON"
+                TextColor="White" />
+
+            <Label
+                Grid.Row="2"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                LineBreakMode="WordWrap"
+                Text="Getting to know this distinctive and highly specialized clade"
+                TextColor="White" />
+
+            <Label
+                Grid.Row="2"
+                Grid.Column="2"
+                HorizontalOptions="EndAndExpand"
+                Text="Scroll to know more"
+                VerticalOptions="EndAndExpand">
+                <Label.GestureRecognizers>
+                    <SwipeGestureRecognizer Direction="Up" Swiped="SwipeGestureRecognizer_Swiped" />
+                </Label.GestureRecognizers>
+            </Label>
+
+            <Image
+                Grid.Row="2"
+                Grid.Column="2"
+                HorizontalOptions="End"
+                Source="chameleon2.png"
+                VerticalOptions="End" />
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -7,7 +7,10 @@ namespace Xamls.Models
     public enum MenuItemType
     {
         Browse,
-        About
+        About,
+        QuestionsPage,
+        ChameleonUI
+
     }
     public class HomeMenuItem
     {

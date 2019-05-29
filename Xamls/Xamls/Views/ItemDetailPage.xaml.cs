@@ -8,7 +8,7 @@ using Xamls.ViewModels;
 
 namespace Xamls.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
+    //[XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ItemDetailPage : ContentPage
     {
         ItemDetailViewModel viewModel;

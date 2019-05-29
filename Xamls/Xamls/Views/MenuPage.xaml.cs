@@ -7,7 +7,7 @@ using Xamarin.Forms.Xaml;
 
 namespace Xamls.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
+    //[XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MenuPage : ContentPage
     {
         MainPage RootPage { get => Application.Current.MainPage as MainPage; }
@@ -19,7 +19,9 @@ namespace Xamls.Views
             menuItems = new List<HomeMenuItem>
             {
                 new HomeMenuItem {Id = MenuItemType.Browse, Title="Browse" },
-                new HomeMenuItem {Id = MenuItemType.About, Title="About" }
+                new HomeMenuItem {Id = MenuItemType.About, Title="About" },
+                new HomeMenuItem {Id = MenuItemType.QuestionsPage, Title="Login UI Design" },
+                new HomeMenuItem {Id = MenuItemType.ChameleonUI, Title="Chameleon UI Page"}
             };
 
             ListViewMenu.ItemsSource = menuItems;
