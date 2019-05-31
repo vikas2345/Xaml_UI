@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Xamls.Views.ChameleonUI.DetailsPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Button
+                Grid.Row="0"
+                Grid.Column="0"
+                BackgroundColor="#E6287A"
+                Text="Button 0,0"
+                TextColor="White" />
+            <Button
+                Grid.Row="0"
+                Grid.Column="1"
+                BackgroundColor="#EE5D9B"
+                Text="Button 0,1"
+                TextColor="White" />
+            <Button
+                Grid.Row="1"
+                Grid.Column="0"
+                BackgroundColor="#F87EB2"
+                Text="Button 1,0"
+                TextColor="White" />
+            <Button
+                Grid.Row="1"
+                Grid.Column="1"
+                BackgroundColor="#B90E57"
+                Text="Button 1,1"
+                TextColor="White" />
+            <Button
+                Grid.Row="2"
+                Grid.Column="0"
+                BackgroundColor="#CB3B78"
+                Text="Button 2,0"
+                TextColor="White" />
+            <Button
+                Grid.Row="2"
+                Grid.Column="1"
+                BackgroundColor="#DE7FA7"
+                Text="Button 2,1"
+                TextColor="White" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

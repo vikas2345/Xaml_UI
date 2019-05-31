@@ -36,8 +36,13 @@ namespace Xamls.Views
                         MenuPages.Add(id, new NavigationPage(new QuestionsPage()));
                         break;
                     case (int)MenuItemType.ChameleonUI:
-                        MenuPages.Add(id, new NavigationPage(new ChameleonUI.ChameleonUI_HomePage()));
+                        MenuPages.Add(id, new NavigationPage(new ChameleonUI.ChameleonUIView()));
                         break;
+                    case (int)MenuItemType.DataBindingPage:
+                        MenuPages.Add(id, new NavigationPage(new DataBindingPage()));
+                        break;
+
+
                 }
             }
 

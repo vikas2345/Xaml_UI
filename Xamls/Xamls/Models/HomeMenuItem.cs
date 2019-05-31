@@ -9,7 +9,8 @@ namespace Xamls.Models
         Browse,
         About,
         QuestionsPage,
-        ChameleonUI
+        ChameleonUI,
+        DataBindingPage
 
     }
     public class HomeMenuItem

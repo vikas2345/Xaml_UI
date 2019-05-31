@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Xamls.Views.ChameleonUI.ChameleonUIView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <Grid x:Name="ContentWrapper">
+        <StackLayout
+            x:Name="CoverWrapper"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand">
+            <StackLayout.GestureRecognizers>
+                <SwipeGestureRecognizer Direction="Up" Swiped="SwipeGestureRecognizer_Swiped" />
+            </StackLayout.GestureRecognizers>
+            <Image Source="chameleon.png" />
+
+            <Label
+                FontAttributes="Bold"
+                FontSize="Large"
+                HorizontalOptions="StartAndExpand"
+                Text="CHAMELEON"
+                TextColor="White" />
+
+            <Label
+                HorizontalOptions="StartAndExpand"
+                LineBreakMode="WordWrap"
+                Text="Getting to know this &#10; distinctive and highly &#10; specialized clade"
+                TextColor="White" />
+
+            <Image Source="chameleon2.png" />
+        </StackLayout>
+    </Grid>
+</ContentPage>
