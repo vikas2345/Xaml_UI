@@ -41,7 +41,9 @@ namespace Xamls.Views
                     case (int)MenuItemType.DataBindingPage:
                         MenuPages.Add(id, new NavigationPage(new DataBindingPage()));
                         break;
-
+                    case (int)MenuItemType.WeatherPage:
+                        MenuPages.Add(id, new NavigationPage(new WeatherPage()));
+                        break;
 
                 }
             }

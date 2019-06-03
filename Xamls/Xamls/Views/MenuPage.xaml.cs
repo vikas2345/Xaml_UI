@@ -23,6 +23,7 @@ namespace Xamls.Views
                 new HomeMenuItem {Id = MenuItemType.QuestionsPage, Title="Login UI Design" },
                 new HomeMenuItem {Id = MenuItemType.ChameleonUI, Title="Chameleon UI Page"},
                 new HomeMenuItem {Id = MenuItemType.DataBindingPage, Title="Data Binding"},
+                new HomeMenuItem{Id = MenuItemType.WeatherPage, Title="Weather Page"}
             };
 
             ListViewMenu.ItemsSource = menuItems;

@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Xamls.Views.WeatherPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="btnmain" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="Blue" />
+                <Setter Property="FontSize" Value="Large" />
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+
+            <Style x:Key="lblmain" TargetType="Label">
+                <Setter Property="FontSize" Value="Large" />
+                <Setter Property="TextColor" Value="Green" />
+            </Style>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+
+    <ContentPage.Content>
+
+        <Grid Padding="30">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="20" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label
+                Grid.Row="0"
+                Grid.Column="0"
+                Text="Latitude:" />
+
+            <Entry
+                x:Name="txtLat"
+                Grid.Row="0"
+                Grid.Column="1"
+                Placeholder="latitude" />
+
+
+            <Label
+                Grid.Row="1"
+                Grid.Column="0"
+                Text="Longitude:" />
+
+            <Entry
+                x:Name="txtLong"
+                Grid.Row="1"
+                Grid.Column="1"
+                Placeholder="longitude" />
+
+            <Button
+                Grid.Row="2"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Clicked="Button_Clicked"
+                Style="{StaticResource btnmain}"
+                Text="Search" />
+
+            <Label
+                Grid.Row="3"
+                Grid.Column="0"
+                Style="{StaticResource lblmain}"
+                Text="Location: " />
+
+            <Label
+                x:Name="lblSearchLocation"
+                Grid.Row="3"
+                Grid.Column="1"
+                Text="{Binding StationName}" />
+
+            <Label
+                Grid.Row="4"
+                Grid.Column="0"
+                Style="{StaticResource lblmain}"
+                Text="Elevation: " />
+
+            <Label
+                x:Name="lblSearchElevation"
+                Grid.Row="4"
+                Grid.Column="1"
+                Text="{Binding Elevation}" />
+
+            <Label
+                Grid.Row="5"
+                Grid.Column="0"
+                Style="{StaticResource lblmain}"
+                Text="Temperature: " />
+
+            <Label
+                Grid.Row="5"
+                Grid.Column="1"
+                Text="{Binding Temperature}" />
+
+            <Label
+                Grid.Row="6"
+                Grid.Column="0"
+                Style="{StaticResource lblmain}"
+                Text="Humidity: " />
+
+            <Label
+                Grid.Row="6"
+                Grid.Column="1"
+                Text="{Binding Humidity}" />
+
+            <BoxView
+                Grid.Row="7"
+                Grid.Column="0"
+                Color="Green" />
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

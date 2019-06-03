@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using Xamls.Models;
 
 namespace Xamls.Data
@@ -19,41 +21,38 @@ namespace Xamls.Data
             "JORDAN", "REYNOLDS"
         };
 
-        List<Contact> contacts = new List<Contact>();
-
-        public void getContacts()
+        public static List<Contact> CreateContacts()
         {
+            List<Contact> contacts = new List<Contact>();
+            Random random = new Random();
             int counter = 0;
-            while (counter < FirstNames.Count)
+            while (counter < FirstNames.Count-1)
             {
-                char firstNameLetter = Ulip(FirstNames[counter]);
-
+                //string firstNameLetter = CapitaliseWord(FirstNames[counter]);
                 Contact contact = new Contact();
                 contact.FirstName = FirstNames[counter];
                 contact.LastName = LastNames[counter];
-                contact.Email = firstNameLetter+ "@gmail.com";
+                //Email = firstNameLetter + "@gmail.com"
+                contact.Email = FirstNames[counter] + "@gmail.com";
+                contact.Favourite = random.Next() % 2 == 0;              
                 contacts.Add(contact);
                 counter++;
             }
+            return contacts;
         }
 
-        public static async Task<List<Contact>> CreatedContacts()
-        {
-
-        }
-
-        public string CapitaliseWord(string word)
+        public static string CapitaliseWord(string word)
         {
             word = word.Trim();
             char[] charArr = word.ToCharArray();
-            for (int i=word.Length-1; i>=0; i--)
+            for (int i = 0; i < word.Length; i++)
             {
-                if (i == word.Length-1)
-                   charArr[i] = char.ToUpper(charArr[i]);
+                if (i == 0)
+                    charArr[i] = char.ToUpper(charArr[i]);
                 else
                     charArr[i] = char.ToLower(charArr[i]);
             }
-            return new string(charArr) ;
+            return new string(charArr);
         }
 
     }

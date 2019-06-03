@@ -21,14 +21,16 @@
             <ListView
                 x:Name="ContactList"
                 ItemTapped="ContactList_ItemTapped"
-                ItemsSource="">
+                ItemsSource="{Binding Contacts}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <ViewCell.View>
-                                <StackLayout Orientation="Horizontal">
-                                    <Label Style="{StaticResource LabelCellStyle}" Text="{Binding FirstName}" />
-                                    <Label Style="{StaticResource LabelCellStyle}" Text="{Binding LastName}" />
+                                <StackLayout Padding="10">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Style="{StaticResource LabelCellStyle}" Text="{Binding FirstName}" />
+                                        <Label Style="{StaticResource LabelCellStyle}" Text="{Binding LastName}" />
+                                    </StackLayout>
                                     <Label FontSize="10" Text="{Binding Email}" />
                                 </StackLayout>
                             </ViewCell.View>
