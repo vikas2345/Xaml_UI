@@ -4,10 +4,11 @@ using System.Linq;
 
 using Foundation;
 using UIKit;
+using Xamarin.Forms.Platform.iOS;
 
 namespace Xamls.iOS
 {
-    public class Application
+    public class Application: BoxRenderer
     {
         // This is the main entry point of the application.
         static void Main(string[] args)
@@ -16,5 +17,7 @@ namespace Xamls.iOS
             // you can specify it here.
             UIApplication.Main(args, null, "AppDelegate");
         }
+
+        override 
     }
 }
